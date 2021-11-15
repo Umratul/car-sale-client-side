@@ -6,7 +6,7 @@ import './Reviews.css';
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('data.json')
+        fetch('https://raw.githubusercontent.com/Umratul/car-data-a12/main/data/data.json')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])

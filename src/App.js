@@ -5,7 +5,7 @@ import AuthProvider from './contexts/AuthProvider';
 import AddService from './Pages/AddService/AddService';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
-import Review from './Pages/Home/Review/Review';
+
 import Reviews from './Pages/Home/Reviews/Reviews';
 
 import Services from './Pages/Home/Services/Services';
