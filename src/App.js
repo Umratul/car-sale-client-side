@@ -1,9 +1,10 @@
-
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import AddService from './Pages/AddService/AddService';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
+import Payment from './Pages/Dashboard/Payment/Payment';
 import Home from './Pages/Home/Home';
 
 import Reviews from './Pages/Home/Reviews/Reviews';
@@ -44,9 +45,15 @@ function App() {
           <PrivateRoute path="/manageOrders">
             <ManageOrders></ManageOrders>
           </PrivateRoute>
-          <Route path="/dashboard">
+          <PrivateRoute path="/makeAdmin">
+            <MakeAdmin></MakeAdmin>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/payment">
+            <Payment></Payment>
+          </PrivateRoute>
           <Route path="/reviews">
             <Reviews></Reviews>
           </Route>

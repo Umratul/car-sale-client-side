@@ -1,12 +1,12 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
-  const {user,logOut } = useAuth();
+  const {user,logOut,dashboard } = useAuth();
     return (
         <>
         <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
@@ -21,11 +21,17 @@ const Header = () => {
           {/* <Nav.Link as={HashLink} to="/manageOrders">Manage Orders</Nav.Link> */}
                     
           <Nav.Link as={HashLink} to="/addService">Admin</Nav.Link>
-          <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link>
+          {/* <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link> */}
                               
          
           {user?.email ?
-              <Button onClick={logOut} variant="light">Logout</Button> :
+                <div>
+                  <Nav.Link as={HashLink} to="/dashboard">
+                  <Button variant="light">Dashboard</Button></Nav.Link>
+
+              <Button onClick={logOut} variant="light">Logout</Button> 
+              </div>:
+              
                 <Nav.Link as={Link} to="/login">Login</Nav.Link>}
       
             <Navbar.Text>

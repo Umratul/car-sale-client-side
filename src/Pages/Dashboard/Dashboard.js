@@ -22,7 +22,9 @@ const Dashboard = () => {
       <Offcanvas.Body>
         <Nav className="justify-content-start flex-grow-1 pe-3">
           <Nav.Link href="/home">Home</Nav.Link>
+          <Nav.Link href="/payment">Payment</Nav.Link>
           <Nav.Link href="/addService">Admin</Nav.Link>
+          <Nav.Link href="/makeAdmin">Make Admin</Nav.Link>
           <Nav.Link href="/purchase/:serviceId">My Orders</Nav.Link>
           <Nav.Link href="/manageOrders">Manage Orders</Nav.Link>
           <Nav.Link href="/reviews">Review</Nav.Link>
